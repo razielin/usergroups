@@ -13,7 +13,7 @@ docker-compose up -d --build
 ```shell
 docker exec -it usergroups_user_groups_cli_1 php bin/console app:cli
 ```
-For the first run, MySQL database requires about 20 seconds to initialize.
+For the first run, MySQL database may require about 30 seconds to initialize.
 So if you get an API error, try again after few seconds.
 
 # Usage
