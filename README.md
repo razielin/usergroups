@@ -15,4 +15,5 @@ docker exec -it usergroups_user_groups_cli_1 php bin/console app:cli
 ```
 
 # Usage
-Type `help` or press Enter to list all available commands
+Type `help` or press Enter to list all available command names.
+Type a command name and follow instructions.
