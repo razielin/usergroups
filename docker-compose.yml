@@ -25,6 +25,7 @@ services:
     networks:
       - user_groups2
   user_groups_api:
+    restart: always
     build:
       context: api
       dockerfile: Dockerfile

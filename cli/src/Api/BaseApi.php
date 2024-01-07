@@ -14,9 +14,10 @@ class BaseApi
         );
         $context  = stream_context_create($opts);
 
-        $res = json_decode(file_get_contents($url, false, $context), true);
+        $contents = file_get_contents($url, false, $context);
+        $res = json_decode($contents, true);
         if ($res['status'] !== 'ok') {
-            $errorMessage = implode(',', $res['errors']) ?? 'Invalid API request';
+            $errorMessage = implode(',', $res['errors'] ?? ['Invalid API request. Try again later']);
             throw new \RuntimeException($errorMessage);
         }
         return $res['data'];
